@@ -1,0 +1,8 @@
+prompt
+
+1. after clicking on blog section 3 different blogs are there, on clicking read more it is showing 404 | this page could not be found, also on clicking any of the component from there it is not working I mean the user cant come back without loading localhost:3000, but [Lalit Kumar Singh — Senior Software Engineer | Enterprise Java, AI & Distributed Systems](http://localhost:3000/blog/building-event-driven-microservices-kafka#experience) it not working.
+
+2. experience dates wrong
+
+3. dark mode light mode not changing
+
