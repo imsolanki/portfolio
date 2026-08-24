@@ -41,7 +41,7 @@ const KNOWLEDGE_BASE: { patterns: string[]; response: string }[] = [
 
   // Tech Stack
   {
-    patterns: ["tech stack", "technologies", "skills", "what do you use", "programming", "languages", "frameworks", "tools", "what can you do", "technical skills", "proficiency"],
+    patterns: ["tech stack", "technologies", "skills", "what do you use", "programming", "languages", "frameworks", "tools", "what can you do", "technical skills", "proficiency", "expertise", "capable", "ability", "abilities", "know", "competency", "competencies", "strong in", "good at", "specialize", "specialization", "what do you know", "skill set", "skillset"],
     response: `**Core Tech Stack:**\n\n🔧 **Backend:** Java 8+, Spring Boot, Microservices, REST APIs, Spring Cloud, Hibernate\n☁️ **Cloud & DevOps:** AWS (EC2, S3, EB), Docker, Kubernetes, Jenkins, CI/CD, GitHub Actions\n🗄️ **Databases:** PostgreSQL, MySQL, Redis, MongoDB, Kafka, Elasticsearch\n🤖 **AI/ML:** OpenAI, Anthropic, LangChain, LangGraph, CrewAI, RAG, Vector DBs, Prompt Engineering\n📐 **Architecture:** System Design (HLD/LLD), Event-Driven, CQRS, DDD, Saga Pattern\n🌐 **Frontend:** React, Next.js, TypeScript, Tailwind CSS\n🔒 **Security:** OAuth2, JWT, Spring Security, PCI-DSS awareness\n\nLalit specializes in building **production-grade backend systems** and **AI-powered applications** at enterprise scale.`,
   },
 
@@ -53,7 +53,7 @@ const KNOWLEDGE_BASE: { patterns: string[]; response: string }[] = [
 
   // Enterprise / Goldman Sachs / KPMG
   {
-    patterns: ["enterprise", "goldman sachs", "kpmg", "corporate", "banking", "financial", "client onboarding", "current job", "current role", "present", "what are you working on"],
+    patterns: ["enterprise", "goldman sachs", "kpmg", "corporate", "banking", "financial", "client onboarding", "current job", "current role", "present", "what are you working on", "currently working", "current company", "present company", "working now", "right now", "today", "doing now", "latest role", "latest job"],
     response: `**Enterprise Experience — KPMG → Goldman Sachs:**\n\n🏦 **Role:** Senior Software Engineer (April 2024 — Present)\n📍 **Location:** Bengaluru, India\n🎯 **Engagement:** Goldman Sachs Client Onboarding Platform\n\n**What Lalit does:**\n• Architects high-throughput RESTful APIs and Spring Boot microservices\n• Leads the **Rules Migration Initiative** — re-engineering legacy business rule engines\n• Integrated **Agentic AI** workflows for automated test generation\n• Handles Production Support (ROTA) under tight SLAs\n\n📊 **Key Impact:**\n• 30%+ code coverage improvement via AI\n• Zero critical production incidents during migration\n• Reduced client onboarding time by 45%\n\nLalit brings **Goldman Sachs-level quality** and enterprise rigor to every engagement.`,
   },
 
@@ -95,13 +95,13 @@ const KNOWLEDGE_BASE: { patterns: string[]; response: string }[] = [
 
   // Experience / Background / Career
   {
-    patterns: ["experience", "background", "career", "years", "work history", "resume summary", "professional", "journey", "career path", "how long"],
+    patterns: ["experience", "background", "career", "years", "work history", "resume summary", "professional", "journey", "career path", "how long", "total experience", "years of experience", "worked", "working experience", "job history", "employment", "employed", "companies", "previous", "past work", "overview", "summary", "introduction", "introduce", "who is lalit", "about lalit", "about you", "tell me about yourself"],
     response: `**Professional Journey — 5+ Years:**\n\n📅 **Career Timeline:**\n1. 🏦 **KPMG → Goldman Sachs** (Apr 2024 — Present)\n   Senior SWE — Client Onboarding, Rules Migration, Agentic AI\n2. 💼 **Lightzip Tech** (Oct 2023 — Apr 2024)\n   Java SWE — Enterprise HR Platform, SQL optimization\n3. 📱 **Telaverge Communications** (Oct 2021 — Sep 2023)\n   Java SWE — RCS messaging, 2M+ subscribers, 99.9% uptime\n\n🌏 **International:** Studied & worked in Ontario, Canada (2018-2020)\n🧩 **200+ DSA problems** solved on LeetCode & HackerRank\n💡 **Domains:** FinTech, Telecom, HR Tech, E-Commerce, AI/ML\n\nLalit combines **deep technical expertise** with **real-world production experience**.`,
   },
 
   // Education
   {
-    patterns: ["education", "degree", "university", "college", "study", "studied", "school", "qualification", "academic", "conestoga", "rajasthan", "btech", "b.tech", "pgdm"],
+    patterns: ["education", "educational", "degree", "university", "college", "study", "studied", "school", "qualification", "qualifications", "academic", "conestoga", "rajasthan", "btech", "b.tech", "pgdm", "engineering", "electronics", "web design", "canada", "ontario", "kota", "cgpa", "gpa", "marks", "percentage", "graduate", "post graduate", "postgraduate", "pg diploma", "diploma", "learning", "course", "courses", "where did you study", "background education"],
     response: `**Education:**\n\n🎓 **PG — Web Design & Development**\nConestoga College, Ontario, Canada (2018 — 2020)\nScore: 82%\n\n🎓 **B.Tech — Electronics & Communications Engineering**\nRajasthan Technical University, Kota, India (2012 — 2016)\nCGPA: 7.2\n\n📚 **Continuous Learning:**\n• AWS Cloud practitioner concepts\n• System Design for large-scale systems\n• AI/ML and LLM integration courses\n• 200+ DSA problems on LeetCode & HackerRank\n\nLalit believes in **lifelong learning** and continuously upskills in emerging technologies.`,
   },
 
@@ -113,13 +113,13 @@ const KNOWLEDGE_BASE: { patterns: string[]; response: string }[] = [
 
   // DSA / Coding / LeetCode
   {
-    patterns: ["dsa", "leetcode", "hackerrank", "coding", "algorithm", "data structure", "competitive programming", "problem solving", "coding challenge"],
+    patterns: ["dsa", "leetcode", "hackerrank", "coding", "algorithm", "data structure", "competitive programming", "problem solving", "coding challenge", "problems solved", "how many problems", "practice", "competitive", "codeforces"],
     response: `**DSA & Problem Solving:**\n\n🧩 **200+ problems** solved across LeetCode & HackerRank\n\n**Focus Areas:**\n• Arrays, Strings, Sliding Window\n• Trees, Graphs, BFS/DFS\n• Dynamic Programming\n• System Design (HLD/LLD)\n• Greedy & Backtracking\n\n**Approach:**\nLalit practices DSA not just for interviews but to write **more efficient production code**. His optimization of SQL queries at Lightzip (40% improvement) and event-driven architecture design at Telaverge directly benefit from strong algorithmic thinking.\n\n💡 He's actively growing this number and aims for 500+ by end of year!`,
   },
 
   // Strengths / Soft Skills / Why Hire
   {
-    patterns: ["strength", "soft skill", "why hire", "why should i", "what makes you special", "unique", "stand out", "differentiator", "value", "why you", "what sets you apart"],
+    patterns: ["strength", "soft skill", "why hire", "why should i", "what makes you special", "unique", "stand out", "differentiator", "value", "why you", "what sets you apart", "advantage", "best quality", "qualities", "personality", "traits", "character", "good qualities", "strong point", "strong points", "usp", "best at", "remarkable", "impressive"],
     response: `**Why Hire Lalit?**\n\n🏆 **Key Differentiators:**\n\n1. **Enterprise + AI** — Rare combination of Goldman Sachs-level enterprise engineering AND cutting-edge AI/LLM expertise\n2. **Production-Proven** — Every skill is battle-tested in production, not just tutorials\n3. **Full-Stack Backend** — From system design → implementation → deployment → monitoring\n4. **Scale Experience** — Built systems serving 2M+ users with 99.9% uptime\n5. **AI-Augmented Development** — Actively uses and builds AI tools to 10x productivity\n\n💡 **Soft Skills:**\n• Clear technical communication\n• Cross-functional collaboration (worked with PMs, QA, DevOps, business stakeholders)\n• Mentoring junior developers\n• Agile/Scrum methodology\n• Production support under pressure (Goldman Sachs ROTA)\n\nLalit doesn't just write code — he **engineers solutions**.`,
   },
 
@@ -208,55 +208,167 @@ const KNOWLEDGE_BASE: { patterns: string[]; response: string }[] = [
   },
 ];
 
-// Fuzzy matching: calculate simple similarity score
-function similarity(a: string, b: string): number {
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
-  if (aLower === bLower) return 1;
-  if (aLower.includes(bLower) || bLower.includes(aLower)) return 0.8;
+// ============================================================
+// NLP-lite Matching Engine
+// ============================================================
 
-  // Check word overlap
-  const aWords = aLower.split(/\s+/);
-  const bWords = new Set(bLower.split(/\s+/));
-  let matches = 0;
-  for (const word of aWords) {
-    if (word.length < 3) continue;
-    for (const bWord of bWords) {
-      if (bWord.length < 3) continue;
-      // Substring match (handles typos like "exprience" matching "experience")
-      if (bWord.includes(word.slice(0, Math.max(3, word.length - 2))) ||
-          word.includes(bWord.slice(0, Math.max(3, bWord.length - 2)))) {
-        matches++;
-        break;
+// Levenshtein distance — handles real typos like "exprience" → "experience"
+function levenshtein(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  const dp: number[][] = Array.from({ length: m + 1 }, (_, i) =>
+    Array.from({ length: n + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0))
+  );
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] = a[i - 1] === b[j - 1]
+        ? dp[i - 1][j - 1]
+        : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+    }
+  }
+  return dp[m][n];
+}
+
+// Normalized similarity: 0 → no match, 1 → exact match
+function wordSimilarity(a: string, b: string): number {
+  const maxLen = Math.max(a.length, b.length);
+  if (maxLen === 0) return 1;
+  return 1 - levenshtein(a, b) / maxLen;
+}
+
+// Stop words to ignore when extracting keywords
+const STOP_WORDS = new Set([
+  "what", "is", "are", "the", "a", "an", "of", "in", "to", "for", "and", "or",
+  "can", "you", "tell", "me", "about", "do", "does", "did", "has", "have", "had",
+  "how", "where", "when", "who", "which", "this", "that", "with", "from", "on",
+  "at", "by", "it", "its", "i", "my", "your", "his", "her", "their", "our",
+  "please", "could", "would", "should", "will", "may", "might", "shall", "be",
+  "been", "being", "was", "were", "am", "let", "know", "give", "get", "got",
+  "some", "any", "all", "more", "most", "very", "also", "just", "so", "than",
+  "too", "not", "no", "yes", "up", "out", "if", "then", "else", "but", "like",
+  "lalit", "lalit's", "lalits", "singh", "kumar", "mr", "sir", "hey", "hi",
+]);
+
+// Extract meaningful keywords from input
+function extractKeywords(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length >= 2 && !STOP_WORDS.has(w));
+}
+
+// Check if a keyword fuzzy-matches any pattern using Levenshtein
+function fuzzyMatchesPattern(keyword: string, pattern: string): number {
+  // Direct substring check first (fast path)
+  if (pattern.includes(keyword) || keyword.includes(pattern)) return 1;
+
+  // Split multi-word patterns and check each word
+  const patternWords = pattern.split(/\s+/);
+  let bestScore = 0;
+
+  for (const pw of patternWords) {
+    // Exact match
+    if (pw === keyword) return 1;
+
+    // Levenshtein-based fuzzy match
+    const sim = wordSimilarity(keyword, pw);
+    if (sim > bestScore) bestScore = sim;
+
+    // Check if keyword is a prefix/stem of pattern word or vice versa (handles "educational" → "education")
+    if (pw.length >= 4 && keyword.length >= 4) {
+      const minLen = Math.min(pw.length, keyword.length);
+      const commonPrefix = pw.slice(0, minLen) === keyword.slice(0, minLen);
+      // Check stem: first 4+ chars match
+      const stemLen = Math.min(minLen, Math.max(4, Math.floor(minLen * 0.7)));
+      if (pw.slice(0, stemLen) === keyword.slice(0, stemLen)) {
+        const stemScore = stemLen / Math.max(pw.length, keyword.length);
+        if (stemScore > bestScore) bestScore = Math.max(stemScore, 0.75);
       }
     }
   }
-  return aWords.length > 0 ? matches / Math.max(aWords.length, 1) : 0;
+
+  return bestScore;
+}
+
+// Score how well the input matches a knowledge base entry
+function scoreEntry(inputKeywords: string[], entry: { patterns: string[] }): number {
+  if (inputKeywords.length === 0) return 0;
+
+  let totalScore = 0;
+  let matchedKeywords = 0;
+
+  for (const keyword of inputKeywords) {
+    let bestPatternScore = 0;
+
+    for (const pattern of entry.patterns) {
+      const score = fuzzyMatchesPattern(keyword, pattern);
+      if (score > bestPatternScore) bestPatternScore = score;
+    }
+
+    // Count as a match if similarity > 0.6 (allows 1-2 char typos)
+    if (bestPatternScore >= 0.6) {
+      matchedKeywords++;
+      totalScore += bestPatternScore;
+    }
+  }
+
+  // Return weighted score: prioritize entries where keywords matched well
+  // Score = (matched keywords / total keywords) * average match quality
+  if (matchedKeywords === 0) return 0;
+  const coverage = matchedKeywords / inputKeywords.length;
+  const quality = totalScore / matchedKeywords;
+  // Bonus for matching more keywords absolutely (not just percentage)
+  const absoluteBonus = Math.min(matchedKeywords * 0.1, 0.3);
+  return coverage * quality + absoluteBonus;
 }
 
 function getAIResponse(input: string): string {
   const lowerInput = input.toLowerCase().trim();
 
-  // Exact pattern matching first
+  // --- Pass 1: Exact substring match (fastest, most reliable) ---
   for (const entry of KNOWLEDGE_BASE) {
     if (entry.patterns.some((pattern) => lowerInput.includes(pattern))) {
       return entry.response;
     }
   }
 
-  // Fuzzy matching as fallback
-  let bestMatch = { score: 0, response: "" };
-  for (const entry of KNOWLEDGE_BASE) {
-    for (const pattern of entry.patterns) {
-      const score = similarity(lowerInput, pattern);
+  // --- Pass 2: Keyword extraction + fuzzy matching ---
+  const keywords = extractKeywords(lowerInput);
+
+  if (keywords.length > 0) {
+    let bestMatch = { score: 0, response: "" };
+
+    for (const entry of KNOWLEDGE_BASE) {
+      const score = scoreEntry(keywords, entry);
       if (score > bestMatch.score) {
         bestMatch = { score, response: entry.response };
       }
     }
+
+    // Threshold: if best score is reasonable, use it
+    if (bestMatch.score >= 0.3) {
+      return bestMatch.response;
+    }
   }
 
-  if (bestMatch.score >= 0.4) {
-    return bestMatch.response;
+  // --- Pass 3: Single-word fuzzy match (last resort for very short/typo-heavy input) ---
+  const allWords = lowerInput.replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(w => w.length >= 3);
+  for (const word of allWords) {
+    for (const entry of KNOWLEDGE_BASE) {
+      for (const pattern of entry.patterns) {
+        if (wordSimilarity(word, pattern) >= 0.7) {
+          return entry.response;
+        }
+        // Also check individual pattern words
+        for (const pw of pattern.split(/\s+/)) {
+          if (pw.length >= 3 && wordSimilarity(word, pw) >= 0.7) {
+            return entry.response;
+          }
+        }
+      }
+    }
   }
 
   return `That's a great question! I don't have a specific answer for that, but I'm happy to help with anything about Lalit's career. Here are some things I know well:\n\n💼 **Career** — "Tell me about your experience"\n🔧 **Tech Stack** — "What technologies do you use?"\n🤖 **AI Work** — "Tell me about your AI experience"\n🏦 **Enterprise** — "Tell me about Goldman Sachs"\n📐 **System Design** — "System design expertise"\n📧 **Contact** — "How can I reach Lalit?"\n🎓 **Education** — "Where did you study?"\n💪 **Why Hire** — "Why should I hire you?"\n\nOr reach out directly at **shobhitsingh.e28@gmail.com** 📧`;
