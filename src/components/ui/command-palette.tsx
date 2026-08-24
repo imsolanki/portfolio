@@ -271,7 +271,7 @@ export function CommandPalette() {
         <>
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] bg-bg-primary/60 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -287,26 +287,26 @@ export function CommandPalette() {
           >
             <motion.div
               onWheel={(e) => e.stopPropagation()}
-              className="w-full max-w-lg mx-4 overflow-hidden rounded-2xl border border-white/10 bg-[#18181B]/95 backdrop-blur-2xl shadow-2xl"
+              className="w-full max-w-lg mx-4 overflow-hidden rounded-2xl border border-surface-border bg-bg-secondary/95 backdrop-blur-2xl shadow-2xl"
               initial={{ scale: 0.95, y: -20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: -20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
             >
               {/* Search Input */}
-              <div className="flex items-center gap-3 px-4 border-b border-white/10">
-                <Search className="w-5 h-5 text-[#71717A]" />
+              <div className="flex items-center gap-3 px-4 border-b border-surface-border">
+                <Search className="w-5 h-5 text-text-muted" />
                 <input
                   type="text"
                   placeholder="Type a command or search..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="flex-1 py-4 bg-transparent text-[#FAFAFA] placeholder-[#71717A] outline-none text-sm"
+                  className="flex-1 py-4 bg-transparent text-text-primary placeholder-text-muted outline-none text-sm"
                   autoFocus
                 />
                 <button
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-center w-6 h-6 rounded border border-white/10 text-[#71717A] hover:text-[#FAFAFA] transition-colors"
+                  className="flex items-center justify-center w-6 h-6 rounded border border-surface-border text-text-muted hover:text-text-primary transition-colors"
                 >
                   <X className="w-3 h-3" />
                 </button>
@@ -315,13 +315,13 @@ export function CommandPalette() {
               {/* Commands List */}
               <div className="max-h-[300px] overflow-y-auto py-2">
                 {filteredCommands.length === 0 ? (
-                  <div className="px-4 py-8 text-center text-[#71717A] text-sm">
+                  <div className="px-4 py-8 text-center text-text-muted text-sm">
                     No results found.
                   </div>
                 ) : (
                   groups.map((group) => (
                     <div key={group}>
-                      <div className="px-4 py-1.5 text-xs font-medium text-[#71717A] uppercase tracking-wider">
+                      <div className="px-4 py-1.5 text-xs font-medium text-text-muted uppercase tracking-wider">
                         {group}
                       </div>
                       {filteredCommands
@@ -337,23 +337,23 @@ export function CommandPalette() {
                               className={cn(
                                 "w-full flex items-center gap-3 px-4 py-2.5 text-sm text-left transition-colors",
                                 idx === selectedIndex
-                                  ? "bg-white/5 text-[#FAFAFA]"
-                                  : "text-[#A1A1AA] hover:bg-white/5 hover:text-[#FAFAFA]"
+                                  ? "bg-surface text-text-primary"
+                                  : "text-text-secondary hover:bg-surface hover:text-text-primary"
                               )}
                             >
                               <span
                                 className={cn(
                                   "flex-shrink-0",
                                   idx === selectedIndex
-                                    ? "text-[#8B5CF6]"
-                                    : "text-[#71717A]"
+                                    ? "text-accent-purple"
+                                    : "text-text-muted"
                                 )}
                               >
                                 {cmd.icon}
                               </span>
                               <span className="flex-1">{cmd.label}</span>
                               {cmd.shortcut && (
-                                <span className="text-xs text-[#71717A] font-mono">
+                                <span className="text-xs text-text-muted font-mono">
                                   {cmd.shortcut}
                                 </span>
                               )}
@@ -366,22 +366,22 @@ export function CommandPalette() {
               </div>
 
               {/* Footer */}
-              <div className="flex items-center justify-between px-4 py-2 border-t border-white/10 text-[10px] text-[#71717A]">
+              <div className="flex items-center justify-between px-4 py-2 border-t border-surface-border text-[10px] text-text-muted">
                 <div className="flex items-center gap-3">
                   <span className="flex items-center gap-1">
-                    <kbd className="px-1 py-0.5 rounded border border-white/10 bg-white/5 font-mono">
+                    <kbd className="px-1 py-0.5 rounded border border-surface-border bg-surface font-mono">
                       ↑↓
                     </kbd>
                     Navigate
                   </span>
                   <span className="flex items-center gap-1">
-                    <kbd className="px-1 py-0.5 rounded border border-white/10 bg-white/5 font-mono">
+                    <kbd className="px-1 py-0.5 rounded border border-surface-border bg-surface font-mono">
                       ↵
                     </kbd>
                     Select
                   </span>
                   <span className="flex items-center gap-1">
-                    <kbd className="px-1 py-0.5 rounded border border-white/10 bg-white/5 font-mono">
+                    <kbd className="px-1 py-0.5 rounded border border-surface-border bg-surface font-mono">
                       esc
                     </kbd>
                     Close

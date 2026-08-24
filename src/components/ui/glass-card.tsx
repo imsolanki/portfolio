@@ -53,8 +53,8 @@ export function GlassCard({
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={cn(
         "relative overflow-hidden rounded-2xl",
-        "bg-white/[0.03] backdrop-blur-xl border border-white/[0.08]",
-        hoverEffect && "hover:border-white/[0.15] hover:bg-white/[0.04]",
+        "bg-surface backdrop-blur-xl border border-surface-border",
+        hoverEffect && "hover:border-surface-border-hover hover:bg-surface",
         "transition-colors duration-500",
         className
       )}

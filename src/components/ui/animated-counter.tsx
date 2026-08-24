@@ -39,12 +39,12 @@ export function AnimatedCounter({
 
   return (
     <div ref={ref} className={cn("flex flex-col items-center justify-center", className)}>
-      <div className="flex items-baseline gap-1 text-5xl md:text-6xl font-heading font-bold text-zinc-100">
+      <div className="flex items-baseline gap-1 text-5xl md:text-6xl font-heading font-bold text-text-primary">
         {prefix && <span className="text-3xl text-purple-400">{prefix}</span>}
         <motion.span>{rounded}</motion.span>
         {suffix && <span className="text-3xl text-blue-400">{suffix}</span>}
       </div>
-      <span className="mt-2 text-sm md:text-base text-zinc-400 font-medium tracking-wide uppercase">
+      <span className="mt-2 text-sm md:text-base text-text-muted font-medium tracking-wide uppercase">
         {label}
       </span>
     </div>

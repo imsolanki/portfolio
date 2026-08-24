@@ -34,14 +34,14 @@ export function SystemDesign() {
                     className={cn(
                       "relative px-4 py-2 rounded-full text-sm font-medium transition-colors snap-center",
                       isActive
-                        ? "text-zinc-100"
-                        : "text-zinc-400 hover:text-zinc-300 hover:bg-zinc-800/50"
+                        ? "text-text-primary"
+                        : "text-text-muted hover:text-text-secondary hover:bg-bg-tertiary/50"
                     )}
                   >
                     {isActive && (
                       <motion.div
                         layoutId="activeTabIndicator"
-                        className="absolute inset-0 bg-zinc-800 rounded-full"
+                        className="absolute inset-0 bg-bg-tertiary rounded-full"
                         style={{ borderBottom: "2px solid #8B5CF6" }}
                         initial={false}
                         transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -64,12 +64,12 @@ export function SystemDesign() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <GlassCard className="p-6 md:p-10 border-zinc-800/60 bg-zinc-900/30">
+                <GlassCard className="p-6 md:p-10 border-border/60 bg-bg-secondary/30">
                   <div className="mb-8">
-                    <h3 className="text-2xl md:text-3xl font-bold font-heading text-zinc-100 mb-2">
+                    <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary mb-2">
                       {activeDesign.title}
                     </h3>
-                    <p className="text-zinc-400 text-lg">{activeDesign.description}</p>
+                    <p className="text-text-muted text-lg">{activeDesign.description}</p>
                   </div>
 
                   {/* Components Flow */}
@@ -81,10 +81,10 @@ export function SystemDesign() {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="flex flex-col items-center justify-center bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-3 min-w-[120px] text-center"
+                            className="flex flex-col items-center justify-center bg-bg-tertiary/50 border border-border-hover rounded-lg px-4 py-3 min-w-[120px] text-center"
                           >
                             <Server className="w-5 h-5 mb-2 text-purple-400" />
-                            <span className="text-sm font-medium text-zinc-200">
+                            <span className="text-sm font-medium text-text-primary">
                               {component}
                             </span>
                           </motion.div>
@@ -94,7 +94,7 @@ export function SystemDesign() {
                               initial={{ opacity: 0, width: 0 }}
                               animate={{ opacity: 1, width: "auto" }}
                               transition={{ delay: idx * 0.1 + 0.1 }}
-                              className="text-zinc-600"
+                              className="text-text-muted"
                             >
                               <ArrowRight className="w-5 h-5" />
                             </motion.div>
@@ -107,7 +107,7 @@ export function SystemDesign() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Scale Metrics */}
                     <div>
-                      <h4 className="flex items-center text-lg font-bold text-zinc-200 mb-4">
+                      <h4 className="flex items-center text-lg font-bold text-text-primary mb-4">
                         <TrendingUp className="w-5 h-5 mr-2 text-cyan-400" />
                         Scale Metrics
                       </h4>
@@ -115,10 +115,10 @@ export function SystemDesign() {
                         {activeDesign.scaleMetrics.map((metric, i) => (
                           <div
                             key={i}
-                            className="bg-zinc-800/40 border border-zinc-700/50 rounded-lg p-3 flex items-center"
+                            className="bg-bg-tertiary/40 border border-border-hover/50 rounded-lg p-3 flex items-center"
                           >
                             <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-3" />
-                            <span className="text-zinc-300 text-sm">{metric}</span>
+                            <span className="text-text-secondary text-sm">{metric}</span>
                           </div>
                         ))}
                       </div>
@@ -126,14 +126,14 @@ export function SystemDesign() {
 
                     {/* Design Decisions */}
                     <div>
-                      <h4 className="flex items-center text-lg font-bold text-zinc-200 mb-4">
+                      <h4 className="flex items-center text-lg font-bold text-text-primary mb-4">
                         <Lightbulb className="w-5 h-5 mr-2 text-amber-400" />
                         Design Decisions
                       </h4>
                       <ul className="space-y-3">
                         {activeDesign.designDecisions.map((decision, i) => (
-                          <li key={i} className="flex items-start text-sm text-zinc-300">
-                            <Cpu className="w-4 h-4 mr-2 mt-0.5 text-zinc-500 shrink-0" />
+                          <li key={i} className="flex items-start text-sm text-text-secondary">
+                            <Cpu className="w-4 h-4 mr-2 mt-0.5 text-text-muted shrink-0" />
                             <span>{decision}</span>
                           </li>
                         ))}

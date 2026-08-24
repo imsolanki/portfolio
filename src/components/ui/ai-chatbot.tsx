@@ -172,8 +172,8 @@ export function AIChatbot() {
         className={cn(
           "fixed bottom-6 right-6 z-[90] flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300",
           isOpen
-            ? "bg-[#27272A] hover:bg-[#3F3F46]"
-            : "bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]"
+            ? "bg-bg-tertiary hover:bg-bg-tertiary"
+            : "bg-gradient-to-r from-accent-purple to-accent-blue hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]"
         )}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -208,7 +208,7 @@ export function AIChatbot() {
         {/* Notification dot */}
         {!isOpen && (
           <motion.span
-            className="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-[#09090B]"
+            className="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-bg-primary"
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
@@ -220,32 +220,32 @@ export function AIChatbot() {
         {isOpen && (
           <motion.div
             onWheel={(e) => e.stopPropagation()}
-            className="fixed bottom-24 right-6 z-[90] w-[380px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-8rem)] flex flex-col rounded-2xl border border-white/10 bg-[#18181B]/95 backdrop-blur-2xl shadow-2xl overflow-hidden"
+            className="fixed bottom-24 right-6 z-[90] w-[380px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-8rem)] flex flex-col rounded-2xl border border-surface-border bg-bg-secondary/95 backdrop-blur-2xl shadow-2xl overflow-hidden"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
             {/* Header */}
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10 bg-[#18181B]">
-              <div className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6]">
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-surface-border bg-bg-secondary">
+              <div className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-accent-purple to-accent-blue">
                 <Bot className="w-5 h-5 text-white" />
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-[#18181B]" />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-bg-secondary" />
               </div>
               <div className="flex-1">
-                <h3 className="text-sm font-semibold text-[#FAFAFA]">
+                <h3 className="text-sm font-semibold text-text-primary">
                   AI Portfolio Assistant
                 </h3>
-                <p className="text-xs text-[#71717A]">
-                  <Sparkles className="inline w-3 h-3 mr-1 text-[#8B5CF6]" />
+                <p className="text-xs text-text-muted">
+                  <Sparkles className="inline w-3 h-3 mr-1 text-accent-purple" />
                   Ask me about Lalit&apos;s work
                 </p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1.5 rounded-lg hover:bg-white/5 transition-colors"
+                className="p-1.5 rounded-lg hover:bg-surface transition-colors"
               >
-                <X className="w-4 h-4 text-[#71717A]" />
+                <X className="w-4 h-4 text-text-muted" />
               </button>
             </div>
 
@@ -262,7 +262,7 @@ export function AIChatbot() {
                   )}
                 >
                   {msg.role === "assistant" && (
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-accent-purple to-accent-blue flex items-center justify-center mt-0.5">
                       <Bot className="w-3.5 h-3.5 text-white" />
                     </div>
                   )}
@@ -270,8 +270,8 @@ export function AIChatbot() {
                     className={cn(
                       "max-w-[80%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
                       msg.role === "user"
-                        ? "bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] text-white rounded-br-md"
-                        : "bg-white/5 text-[#E4E4E7] border border-white/5 rounded-bl-md"
+                        ? "bg-gradient-to-r from-accent-purple to-accent-blue text-white rounded-br-md"
+                        : "bg-surface text-text-secondary border border-surface-border rounded-bl-md"
                     )}
                   >
                     {msg.content.split("\n").map((line, i) => (
@@ -293,8 +293,8 @@ export function AIChatbot() {
                     ))}
                   </div>
                   {msg.role === "user" && (
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-[#27272A] flex items-center justify-center mt-0.5">
-                      <User className="w-3.5 h-3.5 text-[#A1A1AA]" />
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-bg-tertiary flex items-center justify-center mt-0.5">
+                      <User className="w-3.5 h-3.5 text-text-secondary" />
                     </div>
                   )}
                 </motion.div>
@@ -307,15 +307,15 @@ export function AIChatbot() {
                   animate={{ opacity: 1 }}
                   className="flex gap-2 items-start"
                 >
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-accent-purple to-accent-blue flex items-center justify-center">
                     <Bot className="w-3.5 h-3.5 text-white" />
                   </div>
-                  <div className="bg-white/5 border border-white/5 rounded-2xl rounded-bl-md px-4 py-3">
+                  <div className="bg-surface border border-surface-border rounded-2xl rounded-bl-md px-4 py-3">
                     <div className="flex gap-1">
                       {[0, 1, 2].map((i) => (
                         <motion.span
                           key={i}
-                          className="w-2 h-2 rounded-full bg-[#71717A]"
+                          className="w-2 h-2 rounded-full bg-text-muted"
                           animate={{ opacity: [0.3, 1, 0.3] }}
                           transition={{
                             duration: 1,
@@ -339,7 +339,7 @@ export function AIChatbot() {
                     <button
                       key={q}
                       onClick={() => sendMessage(q)}
-                      className="text-xs px-2.5 py-1.5 rounded-full border border-white/10 text-[#A1A1AA] hover:bg-white/5 hover:text-[#FAFAFA] transition-all"
+                      className="text-xs px-2.5 py-1.5 rounded-full border border-surface-border text-text-secondary hover:bg-surface hover:text-text-primary transition-all"
                     >
                       {q}
                     </button>
@@ -351,7 +351,7 @@ export function AIChatbot() {
             {/* Input */}
             <form
               onSubmit={handleSubmit}
-              className="flex items-center gap-2 px-4 py-3 border-t border-white/10"
+              className="flex items-center gap-2 px-4 py-3 border-t border-surface-border"
             >
               <input
                 ref={inputRef}
@@ -359,7 +359,7 @@ export function AIChatbot() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask anything about Lalit..."
-                className="flex-1 bg-white/5 rounded-xl px-3.5 py-2.5 text-sm text-[#FAFAFA] placeholder-[#71717A] outline-none border border-white/5 focus:border-[#8B5CF6]/50 transition-colors"
+                className="flex-1 bg-surface rounded-xl px-3.5 py-2.5 text-sm text-text-primary placeholder-text-muted outline-none border border-surface-border focus:border-accent-purple/50 transition-colors"
                 disabled={isTyping}
               />
               <motion.button
@@ -368,8 +368,8 @@ export function AIChatbot() {
                 className={cn(
                   "flex items-center justify-center w-9 h-9 rounded-xl transition-all",
                   input.trim() && !isTyping
-                    ? "bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] text-white"
-                    : "bg-white/5 text-[#71717A]"
+                    ? "bg-gradient-to-r from-accent-purple to-accent-blue text-white"
+                    : "bg-surface text-text-muted"
                 )}
                 whileHover={input.trim() ? { scale: 1.05 } : {}}
                 whileTap={input.trim() ? { scale: 0.95 } : {}}

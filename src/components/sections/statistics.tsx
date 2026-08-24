@@ -19,7 +19,7 @@ export function Statistics() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-6 flex flex-col items-center justify-center text-center border border-white/5 rounded-2xl bg-white/5 backdrop-blur-sm"
+              className="relative p-6 flex flex-col items-center justify-center text-center border border-surface-border rounded-2xl bg-surface backdrop-blur-sm"
             >
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} label={stat.label} />

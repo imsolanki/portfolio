@@ -26,7 +26,7 @@ export function Preloader() {
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-[#09090B]"
+          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-bg-primary"
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
@@ -69,7 +69,7 @@ export function Preloader() {
           </motion.div>
 
           {/* Progress Bar */}
-          <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden">
+          <div className="w-48 h-[2px] bg-surface-border rounded-full overflow-hidden">
             <motion.div
               className="h-full rounded-full"
               style={{
@@ -84,7 +84,7 @@ export function Preloader() {
 
           {/* Loading Text */}
           <motion.p
-            className="mt-4 text-xs text-[#71717A] tracking-widest uppercase font-mono"
+            className="mt-4 text-xs text-text-muted tracking-widest uppercase font-mono"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}

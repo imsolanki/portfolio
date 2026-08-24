@@ -100,15 +100,15 @@ export function BackendExpertise() {
                     )}
                   />
 
-                  <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-300 group-hover:text-purple-400 group-hover:border-purple-500/30 transition-colors">
+                  <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-bg-secondary/50 border border-border text-text-secondary group-hover:text-purple-400 group-hover:border-purple-500/30 transition-colors">
                     <Icon className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-xl font-bold font-heading mb-3 text-zinc-100">
+                  <h3 className="text-xl font-bold font-heading mb-3 text-text-primary">
                     {topic.title}
                   </h3>
                   
-                  <p className="text-sm text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">
+                  <p className="text-sm text-text-muted leading-relaxed group-hover:text-text-secondary transition-colors">
                     {topic.description}
                   </p>
                 </GlassCard>

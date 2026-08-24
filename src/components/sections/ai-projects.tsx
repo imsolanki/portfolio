@@ -50,7 +50,7 @@ export function AIProjects() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="mb-12">
           <SectionHeading label="AI & Machine Learning" title="Building the Future with AI" />
-          <p className="text-center text-zinc-400 max-w-2xl mx-auto mt-4">
+          <p className="text-center text-text-muted max-w-2xl mx-auto mt-4">
             From RAG systems to multi-agent architectures — exploring the cutting edge of AI engineering.
           </p>
         </div>
@@ -97,18 +97,18 @@ export function AIProjects() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-outfit font-bold text-white mb-3">
+                  <h3 className="text-xl md:text-2xl font-outfit font-bold text-text-primary mb-3">
                     {project.title}
                   </h3>
                   
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  <p className="text-text-muted text-sm leading-relaxed mb-6">
                     {project.description}
                   </p>
 
                   <div className="flex-1">
                     <ul className="space-y-2 mb-6">
                       {project.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-zinc-300">
+                        <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
                           <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
                           <span className="leading-snug">{feature}</span>
                         </li>
@@ -116,12 +116,12 @@ export function AIProjects() {
                     </ul>
                   </div>
 
-                  <div className="pt-6 border-t border-zinc-800/50 mt-auto">
+                  <div className="pt-6 border-t border-border/50 mt-auto">
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 text-[11px] font-medium text-zinc-400 bg-zinc-900/50 border border-zinc-800 rounded"
+                          className="px-2 py-1 text-[11px] font-medium text-text-muted bg-bg-secondary/50 border border-border rounded"
                         >
                           {tech}
                         </span>

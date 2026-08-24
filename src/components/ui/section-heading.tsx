@@ -55,7 +55,7 @@ export function SectionHeading({
 
       <motion.h2
         variants={item}
-        className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-zinc-100 tracking-tight"
+        className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-text-primary tracking-tight"
       >
         {title}
       </motion.h2>
@@ -63,7 +63,7 @@ export function SectionHeading({
       {description && (
         <motion.p
           variants={item}
-          className="text-lg text-zinc-400 max-w-2xl mt-2 leading-relaxed"
+          className="text-lg text-text-muted max-w-2xl mt-2 leading-relaxed"
         >
           {description}
         </motion.p>

@@ -11,7 +11,7 @@ export function OpenSource() {
   const cols = 52;
   const rows = 7;
   const levels = [
-    'bg-white/5', // empty
+    'bg-surface', // empty
     'bg-green-900/40', // light
     'bg-green-600/60', // medium
     'bg-green-400/80' // dark
@@ -36,13 +36,13 @@ export function OpenSource() {
   );
 
   return (
-    <section id="open-source" className="py-24 relative bg-black/20">
+    <section id="open-source" className="py-24 relative bg-bg-primary/20">
       <div className="container mx-auto px-4">
         <SectionHeading label="Open Source" title="Contributing to the Community" />
         
         <div className="max-w-5xl mx-auto">
           {/* GitHub Style Grid */}
-          <div className="bg-[#0d1117] border border-white/10 rounded-xl p-6 mb-8 overflow-x-auto">
+          <div className="bg-[#0d1117] border border-surface-border rounded-xl p-6 mb-8 overflow-x-auto">
             <div className="min-w-[800px]">
               <div className="flex gap-1 mb-2 text-xs text-text-muted">
                 <div className="w-8" /> {/* Spacer for days */}
@@ -92,9 +92,9 @@ export function OpenSource() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 border border-white/10 rounded-xl p-6 flex items-center gap-4"
+                className="bg-surface border border-surface-border rounded-xl p-6 flex items-center gap-4"
               >
-                <div className="p-3 bg-white/10 rounded-lg">
+                <div className="p-3 bg-surface-active rounded-lg">
                   {stat.icon}
                 </div>
                 <div>

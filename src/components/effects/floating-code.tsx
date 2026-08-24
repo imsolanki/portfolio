@@ -51,7 +51,7 @@ export function FloatingCode() {
       {snippets.map((snippet, idx) => (
         <motion.div
           key={idx}
-          className="absolute opacity-[0.08] text-zinc-400 font-mono text-xs whitespace-pre p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+          className="absolute opacity-[0.08] text-text-muted font-mono text-xs whitespace-pre p-4 rounded-lg bg-surface backdrop-blur-sm border border-surface-border"
           style={{
             top: snippet.top,
             left: snippet.left,

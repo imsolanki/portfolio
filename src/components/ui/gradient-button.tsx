@@ -24,7 +24,7 @@ export function GradientButton({
   icon,
   className,
 }: GradientButtonProps) {
-  const baseClasses = "relative inline-flex items-center justify-center rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black overflow-hidden group";
+  const baseClasses = "relative inline-flex items-center justify-center rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-bg-primary overflow-hidden group";
   
   const sizeClasses = {
     sm: "px-4 py-2 text-sm gap-2",
@@ -34,8 +34,8 @@ export function GradientButton({
 
   const variants = {
     primary: "text-white shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]",
-    secondary: "bg-zinc-900 border border-zinc-800 text-zinc-100 hover:bg-zinc-800 hover:border-zinc-700",
-    outline: "border border-transparent bg-transparent text-zinc-100",
+    secondary: "bg-bg-secondary border border-border text-text-primary hover:bg-bg-tertiary hover:border-border-hover",
+    outline: "border border-transparent bg-transparent text-text-primary",
   };
 
   const content = (

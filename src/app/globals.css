@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* Enable class-based dark mode for next-themes */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-inter, Inter, sans-serif);
   --font-heading: var(--font-outfit, Outfit, sans-serif);
@@ -23,6 +26,13 @@
   --color-border: #27272A;
   --color-border-hover: #3F3F46;
 
+  /* Surface overlay tokens (for glass/card effects) */
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-surface-active: rgba(255, 255, 255, 0.10);
+  --color-surface-border: rgba(255, 255, 255, 0.10);
+  --color-surface-border-hover: rgba(255, 255, 255, 0.15);
+
   --animate-gradient-shift: gradient-shift 8s ease infinite;
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -30,9 +40,30 @@
   --animate-fade-in-up: fade-in-up 0.5s ease-out forwards;
 }
 
+/* ========== Light Mode Overrides ========== */
+html:not(.dark) {
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F4F4F5;
+  --color-bg-tertiary: #E4E4E7;
+  
+  --color-text-primary: #09090B;
+  --color-text-secondary: #3F3F46;
+  --color-text-muted: #71717A;
+  
+  --color-border: #E4E4E7;
+  --color-border-hover: #D4D4D8;
+
+  --color-surface: rgba(0, 0, 0, 0.03);
+  --color-surface-hover: rgba(0, 0, 0, 0.05);
+  --color-surface-active: rgba(0, 0, 0, 0.07);
+  --color-surface-border: rgba(0, 0, 0, 0.08);
+  --color-surface-border-hover: rgba(0, 0, 0, 0.12);
+}
+
 @layer base {
   html, body {
     @apply bg-bg-primary text-text-primary font-sans antialiased selection:bg-accent-purple selection:text-white;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* Custom Scrollbar */
@@ -72,17 +103,17 @@
 
   /* Glassmorphism */
   .glass {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-surface);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-surface-border);
   }
   
   .glass-strong {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--color-surface-hover);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--color-surface-border-hover);
   }
 
   /* Gradient Text */

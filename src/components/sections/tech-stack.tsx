@@ -51,7 +51,7 @@ export function TechStack() {
   const allTech = TECH_STACK_CATEGORIES.flatMap((c) => c.items);
   
   return (
-    <section id="tech-stack" className="py-24 relative overflow-hidden">
+    <section id="tech-stack" className="py-24 relative overflow-hidden bg-bg-primary/50">
       <div className="container mx-auto px-4 md:px-6">
         <SectionHeading
           label="Technologies"
@@ -74,11 +74,11 @@ export function TechStack() {
                 key={category.name}
                 variants={categoryVariants}
                 className={cn(
-                  "p-6 rounded-2xl border border-zinc-800/60 backdrop-blur-sm",
+                  "p-6 rounded-2xl border border-border/60 backdrop-blur-sm",
                   colorTheme
                 )}
               >
-                <h3 className="text-xl font-bold text-zinc-100 mb-6 font-heading">
+                <h3 className="text-xl font-bold text-text-primary mb-6 font-heading">
                   {category.name}
                 </h3>
                 
@@ -90,7 +90,7 @@ export function TechStack() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className={cn(
-                        "px-3 py-1.5 rounded-full text-sm font-medium bg-zinc-900/80 text-zinc-300 border border-zinc-700/50 transition-all duration-300 cursor-default",
+                        "px-3 py-1.5 rounded-full text-sm font-medium bg-bg-secondary/80 text-text-secondary border border-border-hover/50 transition-all duration-300 cursor-default",
                         badgeTheme
                       )}
                     >
@@ -114,7 +114,7 @@ export function TechStack() {
           {[...allTech, ...allTech].map((tech, i) => (
             <span
               key={`${tech}-${i}`}
-              className="text-2xl md:text-4xl font-bold text-zinc-600 font-heading tracking-wider"
+              className="text-2xl md:text-4xl font-bold text-text-muted font-heading tracking-wider"
             >
               {tech}
             </span>

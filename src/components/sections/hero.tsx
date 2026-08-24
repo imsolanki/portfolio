@@ -114,10 +114,10 @@ export function Hero() {
             <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
           </a>
           <a
-            href="https://cal.com"
+            href="https://calendly.com/lalitkumarsingh"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full border border-border text-text-primary font-medium hover:bg-white/5 transition-colors"
+            className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full border border-border text-text-primary font-medium hover:bg-surface transition-colors"
           >
             <Calendar className="w-4 h-4 group-hover:scale-110 transition-transform" />
             Book a Call

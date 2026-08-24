@@ -34,7 +34,7 @@ export function GradientMesh() {
         }}
       />
       
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black opacity-80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary opacity-80" />
 
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes blob {

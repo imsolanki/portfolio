@@ -29,7 +29,7 @@ export function BlogPreview() {
                 
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-4 text-xs text-text-muted">
-                    <span className="px-2 py-1 rounded-full bg-white/5 border border-white/10 uppercase tracking-wider font-medium">
+                    <span className="px-2 py-1 rounded-full bg-surface border border-surface-border uppercase tracking-wider font-medium">
                       {post.category}
                     </span>
                     <div className="flex items-center gap-3">
@@ -52,13 +52,13 @@ export function BlogPreview() {
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {post.tags.map(tag => (
-                      <span key={tag} className="text-xs px-2 py-1 rounded-md bg-white/5 text-text-muted">
+                      <span key={tag} className="text-xs px-2 py-1 rounded-md bg-surface text-text-muted">
                         #{tag}
                       </span>
                     ))}
                   </div>
                   
-                  <Link href={`/blog/${post.slug}`} className="mt-auto inline-flex items-center text-sm font-medium text-white hover:text-purple-400 transition-colors group/link">
+                  <Link href={`/blog/${post.slug}`} className="mt-auto inline-flex items-center text-sm font-medium text-text-primary hover:text-purple-400 transition-colors group/link">
                     Read More 
                     <ArrowRight className="w-4 h-4 ml-1 transform transition-transform group-hover/link:translate-x-1" />
                   </Link>

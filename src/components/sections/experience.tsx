@@ -25,7 +25,7 @@ export function Experience() {
 
         <div ref={containerRef} className="mt-16 relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-white/10">
+          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-surface-border">
             <motion.div 
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-purple-500 to-cyan-500 origin-top"
               style={{ height: lineHeight }}
@@ -40,7 +40,7 @@ export function Experience() {
                 <div key={exp.id} className="relative flex flex-col md:flex-row items-start md:justify-between group">
                   
                   {/* Timeline Dot */}
-                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 mt-6 md:mt-8 w-3 h-3 rounded-full bg-black border border-white/30 z-10 -translate-x-[5px] md:-translate-x-1.5">
+                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 mt-6 md:mt-8 w-3 h-3 rounded-full bg-bg-primary border border-text-muted/30 z-10 -translate-x-[5px] md:-translate-x-1.5">
                     <motion.div 
                       className="absolute inset-0 rounded-full bg-cyan-400"
                       initial={{ scale: 0, opacity: 0 }}
@@ -72,7 +72,7 @@ export function Experience() {
                       <div className="flex flex-col space-y-4">
                         <div className="flex flex-wrap justify-between items-start gap-4">
                           <div>
-                            <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                            <h3 className="text-2xl font-bold text-text-primary flex items-center gap-3">
                               {exp.company}
                               {exp.highlight && (
                                 <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-500 border border-yellow-500/20">
@@ -86,7 +86,7 @@ export function Experience() {
                           </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-4 text-sm text-zinc-400">
+                        <div className="flex flex-wrap gap-4 text-sm text-text-muted">
                           <div className="flex items-center gap-1.5">
                             <Calendar className="w-4 h-4" />
                             {exp.period}
@@ -97,24 +97,24 @@ export function Experience() {
                           </div>
                         </div>
 
-                        <p className="text-zinc-300 leading-relaxed text-sm md:text-base">
+                        <p className="text-text-secondary leading-relaxed text-sm md:text-base">
                           {exp.description}
                         </p>
 
                         <ul className="space-y-3 mt-4">
                           {exp.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-start gap-3 text-sm md:text-base text-zinc-300">
+                            <li key={i} className="flex items-start gap-3 text-sm md:text-base text-text-secondary">
                               <CheckCircle2 className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                               <span>{achievement}</span>
                             </li>
                           ))}
                         </ul>
 
-                        <div className="pt-6 mt-4 border-t border-white/5 flex flex-wrap gap-2">
+                        <div className="pt-6 mt-4 border-t border-surface-border flex flex-wrap gap-2">
                           {exp.technologies.map((tech, i) => (
                             <span 
                               key={i}
-                              className="px-3 py-1 rounded-md text-xs font-medium bg-white/5 text-zinc-300 border border-white/10"
+                              className="px-3 py-1 rounded-md text-xs font-medium bg-surface text-text-secondary border border-surface-border"
                             >
                               {tech}
                             </span>
