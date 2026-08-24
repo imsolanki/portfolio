@@ -40,14 +40,14 @@ export function Contact() {
                 <div className="w-12 h-12 rounded-full bg-surface border border-surface-border flex items-center justify-center group-hover:border-purple-500/50 group-hover:bg-purple-500/10 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="text-lg font-medium">shobhitsingh.e28@gmail.com</span>
+                <span className="text-base sm:text-lg font-medium break-all">shobhitsingh.e28@gmail.com</span>
               </a>
               
               <a href="tel:+916306672872" className="flex items-center gap-4 text-text-primary hover:text-purple-400 transition-colors group">
                 <div className="w-12 h-12 rounded-full bg-surface border border-surface-border flex items-center justify-center group-hover:border-purple-500/50 group-hover:bg-purple-500/10 transition-colors">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="text-lg font-medium">+91-6306672872</span>
+                <span className="text-base sm:text-lg font-medium">+91-6306672872</span>
               </a>
               
               <div className="flex items-center gap-4 text-text-primary group">
@@ -83,7 +83,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-surface border border-surface-border p-8 rounded-2xl backdrop-blur-md"
+            className="bg-surface border border-surface-border p-6 sm:p-8 rounded-2xl backdrop-blur-md"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

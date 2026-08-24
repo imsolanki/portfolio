@@ -72,7 +72,7 @@ export function Experience() {
                       <div className="flex flex-col space-y-4">
                         <div className="flex flex-wrap justify-between items-start gap-4">
                           <div>
-                            <h3 className="text-2xl font-bold text-text-primary flex items-center gap-3">
+                            <h3 className="text-xl sm:text-2xl font-bold text-text-primary flex flex-wrap items-center gap-2 sm:gap-3">
                               {exp.company}
                               {exp.highlight && (
                                 <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-500 border border-yellow-500/20">

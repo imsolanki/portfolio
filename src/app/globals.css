@@ -120,6 +120,29 @@ html:not(.dark) {
   .gradient-text {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan;
   }
+
+  /* Hide scrollbar but keep scrolling */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe area insets for mobile (notch, home indicator) */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Horizontal edge fade mask for marquees */
+  .mask-horizontal-edges {
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
 }
 
 @keyframes gradient-shift {

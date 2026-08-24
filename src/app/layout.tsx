@@ -116,7 +116,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${fontVariables} font-sans antialiased`}>
+      <body className={`${fontVariables} font-sans antialiased overflow-x-hidden`}>
         <ThemeProvider>
           <SmoothScroll>
             <Preloader />

@@ -48,7 +48,7 @@ export function Hero() {
         </motion.div>
 
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight mb-6 max-w-5xl leading-tight md:leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight mb-6 max-w-5xl leading-tight md:leading-tight">
           {headlineLines.map((line, i) => (
             <div key={i} className="overflow-hidden">
               <motion.div
@@ -97,18 +97,18 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-12 w-full sm:w-auto px-4 sm:px-0"
         >
           <a
             href="#contact"
-            className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-500 hover:to-blue-500 transition-all shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
+            className="group flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-500 hover:to-blue-500 transition-all shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:shadow-[0_0_30px_rgba(139,92,246,0.6)] w-full sm:w-auto min-h-[44px]"
           >
             Hire Me
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#projects"
-            className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full bg-bg-secondary/50 hover:bg-bg-secondary border border-border text-text-primary font-medium transition-colors"
+            className="group flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full bg-bg-secondary/50 hover:bg-bg-secondary border border-border text-text-primary font-medium transition-colors w-full sm:w-auto min-h-[44px]"
           >
             View Projects
             <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
@@ -117,7 +117,7 @@ export function Hero() {
             href="https://calendly.com/lalitkumarsingh"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full border border-border text-text-primary font-medium hover:bg-surface transition-colors"
+            className="group flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full border border-border text-text-primary font-medium hover:bg-surface transition-colors w-full sm:w-auto min-h-[44px]"
           >
             <Calendar className="w-4 h-4 group-hover:scale-110 transition-transform" />
             Book a Call
